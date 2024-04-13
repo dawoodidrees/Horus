@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//About
-
+//About Section
 const aboutTabs = document.querySelectorAll(".about__security-wrapper");
 
 aboutTabs.forEach((tab, index) => {
