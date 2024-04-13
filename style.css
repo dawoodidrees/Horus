@@ -523,14 +523,11 @@ main {
   gap: 6rem;
 }
 
-.faq__title img {
-  object-fit: contain;
-}
-
 .faq__title h2 {
   font-size: 3.5rem;
   line-height: 1.2;
   letter-spacing: 0.1875rem;
+  display: none;
 }
 
 .faq__desc {
