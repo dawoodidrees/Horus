@@ -1,7 +1,17 @@
 //Slider
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3.2,
-  spaceBetween: 30,
+  slidesPerView: 1.2,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 2.2,
+      spaceBetween: 30,
+    },
+    1250: {
+      slidesPerView: 3.2,
+      spaceBetween: 30,
+    },
+  },
 });
 
 //FAQ Section
@@ -55,4 +65,23 @@ aboutTabs.forEach((tab, index) => {
   if (index === 0) {
     tab.click();
   }
+});
+
+//Navbar
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar ul");
+  const hamburger = document.querySelector(".hamburger__trigger");
+  const mainContent = document.querySelector(".main__content");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    mainContent.classList.toggle("body__lock");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (navbar && !navbar.contains(e.target) && e.target !== hamburger && !hamburger.contains(e.target) && navbar.classList.contains("active")) {
+      navbar.classList.toggle("active");
+      mainContent.classList.toggle("body__lock");
+    }
+  });
 });
