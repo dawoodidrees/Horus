@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const aboutTabs = document.querySelectorAll(".about__security-wrapper");
 
 aboutTabs.forEach((tab, index) => {
-  tab.addEventListener("click", () => {
+  tab.addEventListener("click", (event) => {
     const currentCloseParent = event.target.closest(".about__security-wrapper");
 
     if (!currentCloseParent) return;
