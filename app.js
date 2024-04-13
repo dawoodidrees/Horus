@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper", {
 
 //FAQ
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".faq__accordion-trigger").forEach((faq) => {
+  document.querySelectorAll(".faq__accordion-trigger").forEach((faq, index) => {
     faq.addEventListener("click", (event) => {
       const currentCloseParent = event.target.closest(".single__faq-accordion");
 
@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
       currentDesc.style.height = isActive ? `${currentDesc.scrollHeight}px` : "0px";
       currentDesc.style.marginTop = isActive ? `15px` : "0px";
     });
+
+    if (index === 0) {
+      faq.click();
+    }
   });
 });
 
