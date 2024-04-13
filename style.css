@@ -525,7 +525,7 @@ main {
 
 .faq__title h2 {
   font-size: 3.5rem;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: 0.1875rem;
   display: none;
 }
