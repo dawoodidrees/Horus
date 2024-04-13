@@ -4,7 +4,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
 });
 
-//FAQ
+//FAQ Section
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".faq__accordion-trigger").forEach((faq, index) => {
     faq.addEventListener("click", (event) => {
