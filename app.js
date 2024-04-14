@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
       currentDesc.style.height = isActive ? `${currentDesc.scrollHeight}px` : "0px";
       currentDesc.style.marginTop = isActive ? `15px` : "0px";
     });
-
-    if (index === 0) {
-      faq.click();
-    }
   });
 });
 
